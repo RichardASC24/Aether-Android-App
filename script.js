@@ -11,9 +11,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    document.querySelector(".category1-btn").addEventListener("click", () => {
+       
+            window.location.href = "interest_page.html";
+    });
+
     document.querySelectorAll(".social-btn").forEach(button => {
         button.addEventListener("click", () => {
             alert(`${button.textContent} clicked`);
         });
     });
 });
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const interestsBtn = document.getElementById("interests-btn");
+    const searchBtn = document.getElementById("search-btn");
+
+    if (interestsBtn) {
+        interestsBtn.addEventListener("click", () => {
+            window.location.href = "interest.html";
+        });
+    }
+
+    if (searchBtn) {
+        searchBtn.addEventListener("click", () => {
+            window.location.href = "search.html";
+        });
+    }
+});
+
+
+
+

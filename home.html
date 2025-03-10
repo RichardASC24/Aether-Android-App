@@ -1,3 +1,4 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +29,9 @@
 
         <main class="main-content">
             <button class="quiz-btn">Take a Quiz</button>
-            <button class="search-btn">🔍 Search</button>
+            <button class="search-btn" onclick="window.location.href='search.html'">🔍 Search</button>
             <div class="buttons-container">
-                <button class="category-btn">🌟 Interests</button>
+                <button class="category-btn" id="interests-btn">🌟 Interests</button>
                 <button class="category-btn">💼 Experience</button>
                 <button class="category-btn">💰 Financials</button>
                 <button class="category-btn">📍 Locations</button>
@@ -46,7 +47,9 @@
             </nav>
         </footer>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
+
+
