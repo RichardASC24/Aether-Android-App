@@ -218,3 +218,32 @@ body {
     background: #d0d0d0;
     transform: scale(1.05);
 }
+
+.premium-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    width: 150px;
+    text-align: left;
+    z-index: 10;
+}
+
+.premium-dropdown.show {
+    display: block;
+}
+
+.premium-option {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.premium-option:hover {
+    background: #e3f2fd;
+}

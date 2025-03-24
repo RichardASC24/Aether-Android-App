@@ -41,6 +41,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const premiumBtn = document.querySelector(".premium-btn");
+    const premiumDropdown = document.createElement("div");
+    premiumDropdown.classList.add("premium-dropdown");
+    premiumDropdown.innerHTML = `
+        <div class="premium-option" data-price="5">Basic - $5/month</div>
+        <div class="premium-option" data-price="10">Standard - $10/month</div>
+        <div class="premium-option" data-price="20">Pro - $20/month</div>
+    `;
+    premiumBtn.parentElement.appendChild(premiumDropdown);
+
+    premiumBtn.addEventListener("mouseenter", () => {
+        premiumDropdown.classList.add("show");
+    });
+
+    premiumBtn.parentElement.addEventListener("mouseleave", () => {
+        premiumDropdown.classList.remove("show");
+    });
+
+    document.querySelectorAll(".premium-option").forEach(option => {
+        option.addEventListener("click", (e) => {
+            alert(`You selected the ${e.target.innerText} plan.`);
+        });
+    });
+});
+
 
 
 
